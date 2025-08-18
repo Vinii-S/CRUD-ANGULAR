@@ -97,7 +97,7 @@ export class UserFormComponent implements OnInit {
       // updateUser espera Partial<User> ou Omit<User,'id'> — se o service tiver tipo restrito, ajuste com cast
       this.api.updateUser(this.currentId, payload as Partial<User>).subscribe({
         next: () => {
-          this.router.navigate(['/users']);
+          this.router.navigate(['/usuarios']);
         },
         error: err => console.error('Erro ao atualizar usuário:', err)
       });
@@ -105,7 +105,7 @@ export class UserFormComponent implements OnInit {
       this.api.createUser(payload).subscribe({
         next: (res) => {
           console.log('Resposta do create:', res);
-          this.router.navigate(['/users']);
+          this.router.navigate(['/usuarios']);
         },
         error: err => console.error('Erro ao criar usuário:', err)
       });

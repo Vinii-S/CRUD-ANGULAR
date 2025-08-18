@@ -8,8 +8,10 @@ import { User } from '../../../models/user';
   selector: 'app-users-list',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  styleUrl: './users-list.scss',
   template: `
-    <h2>Usuários</h2>
+  <div class="container">
+    <h2 id="header-usuario">Usuários</h2>
     <a routerLink="/usuarios/novo">Criar novo usuário</a>
     <div *ngIf="loading">Carregando...</div>
     <ul *ngIf="!loading && users.length">
@@ -18,11 +20,12 @@ import { User } from '../../../models/user';
         <br />
         <small>{{ u.telefone }}</small>
         <br />
-        <a [routerLink]="['/usuarios/', u.id]">Editar</a> |
-        <a (click)="onDelete(u.id)" style="cursor:pointer; color:red">Excluir</a>
+        <a [routerLink]="'/usuarios/' + u.id + '/editar'">Editar</a> |
+        <a (click)="onDelete(u.id)" id="excluir" >Excluir</a>
       </li>
     </ul>
     <p *ngIf="!loading && users.length === 0">Nenhum usuário encontrado.</p>
+    </div>
   `
 })
 export class UsersListComponent implements OnInit {

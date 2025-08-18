@@ -1,0 +1,102 @@
+:host {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+#header-usuario {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+li strong {
+  font-size: 18px;
+  color: #333;
+}
+
+li small {
+  display: block;
+  color: #666;
+  margin-top: 5px;
+}
+
+button,
+a {
+  margin: 5px;
+}
+
+a[routerLink="/usuarios/novo"] {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+a[routerLink="/usuarios/novo"]:hover {
+  background-color: #218838;
+}
+
+a[routerLink]:not([routerLink="/usuarios/novo"]) {
+  color: #007bff;
+}
+
+a[routerLink]:hover {
+  color: #0056b3;
+}
+
+a[style*="color:red"] {
+  color: #dc3545 !important;
+}
+
+a[style*="color:red"]:hover {
+  color: #c82333 !important;
+}
+#excluir {
+  color: red;
+  cursor: pointer;
+}
